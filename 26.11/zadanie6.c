@@ -1,5 +1,3 @@
-//Napisz funkcję rekurencyjną obliczającą sumę cyfr podanej liczby.
-
 #include <stdio.h>
 
 int suma(int liczba) {
