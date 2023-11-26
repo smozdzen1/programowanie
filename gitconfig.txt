@@ -1,7 +1,29 @@
-echo "# programowanie" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/smozdzen1/programowanie.git
-git push -u origin main
+#include <stdio.h>
+
+// Deklaracja funkcji rekurencyjnej
+void wypiszLiczby(int n);
+
+int main() {
+    int liczba;
+
+    // Wprowadzenie liczby od użytkownika
+    printf("Podaj liczbe calkowita: ");
+    scanf("%d", &liczba);
+
+    // Wywołanie funkcji i wypisanie liczb
+    printf("Liczby od 1 do %d:\n", liczba);
+    wypiszLiczby(liczba);
+
+    return 0;
+}
+
+// Definicja funkcji rekurencyjnej do wypisywania liczb od 1 do n
+void wypiszLiczby(int n) {
+    // Warunek zakończenia rekurencji
+    if (n > 0) {
+        // Wywołanie rekurencyjne
+        wypiszLiczby(n - 1);
+        // Wypisanie liczby
+        printf("%d ", n);
+    }
+}
